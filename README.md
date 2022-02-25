@@ -1,10 +1,19 @@
-# Getting Started with Create React App
+# React and Supabse API
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+and [Supabase](https://supabase.com/)
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm i '@supabase/supabase-js'`
+
+Install the supabse node module\
+Get URL from 'Config' and 'key' from Project API key from supabse dashboard Settings\
+Open [Supabse project dashboard](https://app.supabase.io/project/)\
+Add URL and Key to client.js directy or add in env and use the reference
+
 
 ### `npm start`
 
@@ -13,7 +22,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\

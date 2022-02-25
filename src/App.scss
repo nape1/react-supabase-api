@@ -1,0 +1,93 @@
+:root {
+  --color-background: #FFFFFF;
+  --rootFont: 10px;
+  --rootpadding: 1rem;
+  --barndColor: #297bf7;
+}
+#App{
+  display: flex;
+  & > div{
+    padding: #{var(--rootpadding)} ;
+  }
+}
+.postInputWrapper{
+  display: flex;
+  flex-direction: column;
+    input, button,textarea{
+        font-size: #{calc(var(--rootFont) * 2)};
+        padding: .4em .7em;
+        border: 1px solid rgb(255, 255, 255);
+        background-color: #f1f1f1;
+        margin: .5em .5em .5em 0;
+        transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        outline-color: none;
+        resize: none;
+        font-family: Arial, Helvetica, sans-serif;
+        &:focus{
+            border-color: #{var(--barndColor)};
+            box-shadow: 0 0 10px #719ECE;
+        }
+    }
+    input{
+      width: 30vmax;
+      max-width: 30em;
+    }
+    textarea{
+      width: 40vmax;
+      max-width: 30em;
+      height: 6em;
+    }
+    button{
+      font-size: #{calc(var(--rootFont) * 1.4)};
+      font-weight: 600;
+      max-width: 9em;
+      border-radius: .3em;
+        cursor: pointer;
+        &:hover{
+            background-color: #{var(--barndColor)};
+            color: #ffffff;
+        }
+    }
+}
+.postWrapper{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  height: 100%;
+  padding: #{var(--rootpadding)} ;
+  :first-child{
+    min-width: 100%;
+    margin-bottom: 0px;
+  }
+}
+.post{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  border: .7px solid #e6e6e6;
+  padding: .4rem .7rem;
+  margin: #{calc(var(--rootpadding)/2)} ;
+  margin-left: 0;
+  text-align: left;
+  min-width: 10em;
+  h3{
+    font-size: #{calc(var(--rootFont) * 1.6)};
+    margin-top: 0;
+    width: 100%;
+  }
+  border-radius: .5em;
+  transition: all .3s ease-in-out;
+  &:hover{
+    background: rgb(236, 236, 236);
+  }
+}
+
+//responsive
+@media screen and (max-width: 720px) {
+  #App{
+    flex-direction: column;
+  }
+  .postInputWrapper{
+    border-bottom: 1px solid #ddd;
+  }
+}
